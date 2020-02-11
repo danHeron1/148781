@@ -1,18 +1,18 @@
 <template>
   <section>
-    <h3>Hello, Crack</h3>
-    <h3>Welcome back homs</h3>
+
     <div class="col form-group">
       <input
         type="email"
-        placeholder="correo"
+        placeholder="username"
         class="form-control mb-2"
-        v-model="user.email"
+        style="border-left-width: 0px;border-top-width: 0px;border-right-width: 0px; border-radius: 0.01rem;"
       >
       <input
-        type="pswd"
+        type="password"
         placeholder="contraseña"
         class="form-control mb-2"
+        style="border-left-width: 0px;border-top-width: 0px;border-right-width: 0px; border-radius: 0.01rem;"
         v-model="user.password"
         @keypress.enter="login"
       >
@@ -20,12 +20,19 @@
       <div class="form-group">
         <div class="row">
           <div class="col">
-            <small>Remember Me</small>
+            <input
+              class="form-check-input"
+              type="checkbox"
+              value=""
+              id="defaultCheck1"
+              style="/*! padding-top: 10vh; */margin: 6px -18px 13px -15px;"
+            >
+            <small>Recuerdame</small>
           </div>
 
           <div class="col">
 
-            <small>Forgot pswrd prroo?</small>
+            <small>Forgot password?</small>
           </div>
 
         </div>
@@ -33,7 +40,7 @@
       </div>
 
       <button
-        class="btn btn-purple btn-dark btn-block"
+        class="btn btn-dark btn-purple btn-block"
         @click='login'
       >Iniciar Sesión</button>
 

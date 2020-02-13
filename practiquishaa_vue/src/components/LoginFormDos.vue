@@ -5,7 +5,7 @@
       <p
         class="text-left"
         style="margin-top: 5vh;font-weight: bold;"
-      >Email</p>
+      >Email Adress</p>
       <input
         type="email"
         class="form-control mb-2"
@@ -21,6 +21,16 @@
         style="border-left-width: 0px; border-top-width: 0px; border-right-width: 0px; border-radius: 0.01rem; margin-top: -2vh;"
         @keypress.enter="login"
       >
+      <p
+        class="text-left"
+        style="margin-top: 4vh;font-weight: bold;"
+      >Confirm Password</p>
+      <input
+        type="password"
+        class="form-control mb-2"
+        style="border-left-width: 0px; border-top-width: 0px; border-right-width: 0px; border-radius: 0.01rem; margin-top: -2vh;"
+        @keypress.enter="login"
+      >
 
       <div class="form-group">
         <div class="row">
@@ -29,11 +39,7 @@
             class="col "
             style="margin-top: 2vh;"
           >
-            <button
-              class="btn btn-dark btn-dark btn-block"
-              style="margin-top: 2vh; border-radius: 0.01rem;padding: 2vh; margin-bottom: 2vh;"
-              @click="login"
-            >Log In</button>
+
             <input
               class="form-check-input"
               type="checkbox"
@@ -42,18 +48,17 @@
               style="/*! padding-top: 10vh; */margin: 6px -18px 13px -15px;"
             >
 
-            <small>Recuerdame</small>
+            <small>I accept the privacy Statement</small>
+            <button
+              class="btn btn-dark btn-block"
+              style="margin-top: 2vh; border-radius: 0.01rem;padding: 2vh; margin-bottom: 2vh;"
+              @click="login"
+            >Register</button>
             <div
               class="col"
               style="margin-top: 2vh;"
             >
 
-              <a
-                class="btn btn-light"
-                href="#"
-                role="button"
-                style="border-top-width: 0px;margin-right: 0px;border-right-width: 0px;border-left-width: 0px;border-bottom-width: 0px;background: white;"
-              >Forgot your password?</a>
             </div>
           </div>
 

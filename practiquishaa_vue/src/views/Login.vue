@@ -2,17 +2,34 @@
   <div class="login container1 ">
     <div class="card p-3">
 
-      <div class="row">
-        <div
-          class="col-5"
-          style="padding: 5vh;"
-        >
-          <h2>Welcome back</h2>
-          <h4>Log in to continue</h4>
-          <LoginForm style="margin: 0vh 10vh;"></LoginForm>
-        </div>
+      <div class="row no-gutters">
+
         <div class="col">
 
+          <img
+            v-bind:src="'https://scontent.fcjs2-1.fna.fbcdn.net/v/t1.15752-9/84301686_215565806238222_6094784443879260160_n.png?_nc_cat=103&_nc_ohc=mgrkVgG2hHgAX-l6_t1&_nc_ht=scontent.fcjs2-1.fna&oh=fd2832635c4873ca20631924a0a2b6bf&oe=5EBCF9E5'"
+            width="600"
+          />
+        </div>
+
+        <div
+          class="col-5"
+          style="padding: 3vh 5vh;"
+        >
+
+          <button
+            type="button"
+            class="btn btn-light"
+            @click="login"
+            style="margin: 10vh 8vh 0vh -4vh; background: white;border-top-width: 0px;border-left-width: 0px;border-right-width: 0px;"
+          >Sign Up</button>
+          <button
+            type="button"
+            class="btn btn-light"
+            @click="login"
+            style="margin: 10vh -2vh 0vh 2vh;background: white;border-top-width: 0px;border-left-width: 0px;border-right-width: 0px;"
+          >Register</button>
+          <LoginForm style="margin: 0vh 10vh;"></LoginForm>
         </div>
       </div>
     </div>

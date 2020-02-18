@@ -9,6 +9,7 @@
       <input
         type="email"
         class="form-control mb-2"
+        v-model="user.email"
         style="border-left-width: 0px; border-top-width: 0px; border-right-width: 0px; border-radius: 0.01rem;margin-top: -2vh;"
       >
       <p
@@ -18,6 +19,7 @@
       <input
         type="password"
         class="form-control mb-2"
+        v-model="user.password"
         style="border-left-width: 0px; border-top-width: 0px; border-right-width: 0px; border-radius: 0.01rem; margin-top: -2vh;"
         @keypress.enter="login"
       >
@@ -28,6 +30,7 @@
       <input
         type="password"
         class="form-control mb-2"
+        v-model="user.password2"
         style="border-left-width: 0px; border-top-width: 0px; border-right-width: 0px; border-radius: 0.01rem; margin-top: -2vh;"
         @keypress.enter="login"
       >
@@ -71,6 +74,7 @@
 </template>
 
 <script lang="js">
+import Auth from '@/config/auth.js'
 export default {
   name: 'LoginForm',
   data () {
@@ -91,16 +95,18 @@ export default {
   },
   methods: {
     login () {
-      let user = {
-        email: 'esto es local'
-      }
+      if (this.user.password === this.user.password2) {
 
+      } else {
+        console.console.log('Las contraseñas tienen que ser iguales')
+      }
+      Auth.signUp(this.user)
       console.log('Soy el login')
-      console.log('user local' + user.email)
-      console.log('user from data:' + this.user.email)
+      console.log('user local' + this.user.email)
       console.log('this.user.password')
       this.$router.push({ name: 'about' })
     }
+
   }
 }
 </script>

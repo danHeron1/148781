@@ -9,6 +9,7 @@
       <input
         type="email"
         class="form-control mb-2"
+        v-model="user.email"
         style="border-left-width: 0px; border-top-width: 0px; border-right-width: 0px; border-radius: 0.01rem;margin-top: -2vh;"
       >
       <p
@@ -18,6 +19,7 @@
       <input
         type="password"
         class="form-control mb-2"
+        v-model="user.password"
         style="border-left-width: 0px; border-top-width: 0px; border-right-width: 0px; border-radius: 0.01rem; margin-top: -2vh;"
         @keypress.enter="login"
       >
@@ -66,21 +68,25 @@
 </template>
 
 <script lang="js">
+import Auth from '@/config/auth.js'
 export default {
   name: 'LoginForm',
   data () {
     return {
       user: {
         email: ' ',
-        password: ' ' }
-    }
+        password: ''
+      },
+      userEmail: ' ',
+      userPassword: ' ' }
   },
   created () {
     console.log(`Estoy en el created ${this.user}`)
   },
 
   mounted () {
-    console.log('soy el mapaaa, dijgo el log in')
+    Auth.signUp(this.user)
+    console.log('soy el mapaaa, digo el log in')
     console.log(`Estoy en el mounted ${this.user}`)
     console.log(`Estoy en ${this.$route.name}`)
   },
@@ -94,6 +100,7 @@ export default {
       console.log('user local' + user.email)
       console.log('user from data:' + this.user.email)
       console.log('this.user.password')
+      Auth.login(this.user)
       this.$router.push({ name: 'about' })
     }
   }

@@ -7,14 +7,21 @@ import Auth from './config/auth'
 // Librerias de ususario
 import 'bootstrap/scss/bootstrap.scss'
 Vue.config.productionTip = false
-router.beforeEach((to, from, next) => {
+router.beforeEach(async (to, from, next) => {
   if (to.meta.auth) {
     console.log('Necesita permiso para entrar')
-    if (Auth.checkUser()) {
-      next()
-      // return
+    // Traer informacion actual del usuario
+    let user = await Auth.checkUser()
+    if (user == null) {
+      // si no hay'un usuario, se redirecciona a login
+      next({
+        name: 'login'
+      })
+      return
     }
-    router.push({ name: 'login' })
+    // Si existe un usuario avanzamos a la ruta
+    console.log(`Usuario logeado: ${user.email}`)
+    next()
   }
   next()
 })

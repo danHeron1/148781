@@ -6,7 +6,7 @@ export default {
     fireApp.auth().signOut()
     router.push({ name: 'login' })
   },
-  checkUser () {
+  async checkUser () {
     let user = fireApp.auth().currentUser
     if (user) {
       return user
@@ -31,6 +31,7 @@ export default {
         email: result.user.email,
         uid: result.user.id
       }
+      router.push({ name: 'about' })
       fireApp.auth().updateCurrentUser(newUser).catch(err => console.table(err))
     }).catch((err) => {
       console.table(err)

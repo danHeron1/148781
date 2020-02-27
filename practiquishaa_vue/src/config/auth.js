@@ -13,12 +13,12 @@ export default {
     }
     return null
   },
-  login (data) {
-    fireApp.auth().signInWithEmailAndPassword(data.email, data.password).then((result) => {
+  async login (data) {
+    await fireApp.auth().signInWithEmailAndPassword(data.email, data.password).then((result) => {
       console.log(result)
       router.push({ name: 'about' })
     }).catch((err) => {
-      console.log(err)
+      return Promise.reject(err)
     })
   },
   signUp (data) {

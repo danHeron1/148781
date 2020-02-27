@@ -24,7 +24,8 @@
         style="border-left-width: 0px; border-top-width: 0px; border-right-width: 0px; border-radius: 0.01rem; margin-top: -2vh;"
         @keypress.enter="login"
       />
-
+      {{user.password}}
+      {{1+1}}
       <div class="form-group">
         <div class="row">
           <div
@@ -90,7 +91,7 @@ export default {
   },
   methods: {
     login () {
-      let user = {
+      /* let user = {
         email: 'esto es local'
       }
 
@@ -99,7 +100,12 @@ export default {
       console.log('user from data:' + this.user.email)
       console.log('this.user.password')
       Auth.login(this.user)
-    //  this.$router.push({ name: 'about' })
+    //  this.$router.push({ name: 'about' }) */
+      Auth.login(this.user).catch(error => {
+        // *Tomamos el error y lo utilizamos en el alert correspondiente.
+        console.log('Estoy en LoginForm')
+        console.log('Esto es un error:' + error.code, error.message)
+      })
     }
   }
 }

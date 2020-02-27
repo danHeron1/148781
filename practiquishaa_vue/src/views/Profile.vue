@@ -25,22 +25,55 @@
               class="row"
               style="margin-top: 6vh;"
             >
+              <p style="margin-top: 8px;">Nombre</p>
               <div class="col">
                 <input
                   type="text"
                   class="form-control"
                   placeholder="First name"
+                  style="margin-left: -8px;"
                 >
               </div>
+              <p style="margin-top: 8px;">Apellido</p>
               <div class="col">
                 <input
                   type="text"
                   class="form-control"
                   placeholder="Last name"
+                  style="margin-left: -1px;"
                 >
-              </div>
 
+              </div>
             </div>
+            <div
+              class="row"
+              style="margin-top: 6vh;"
+            >
+              <p style="margin-top: 8px;">Correo</p>
+              <div class="col">
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="Correo"
+                >
+
+              </div>
+              <p style="margin-top: 8px;">Teléfono</p>
+              <div class="col">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Teléfono"
+                >
+
+              </div>
+            </div>
+            <button
+              class="btn btn-primary btn-primary btn-block"
+              style="padding: 2vh; width: 25vh; margin: 15px 130px;border-radius: 35px;"
+            >
+              Guardar Cambios
+            </button>
           </form>
 
         </div>

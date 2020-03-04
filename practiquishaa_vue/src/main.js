@@ -4,6 +4,7 @@ import './registerServiceWorker'
 import router from './router'
 import store from './store'
 import Auth from './config/auth'
+import 'animate.css'
 // Librerias de ususario
 import 'bootstrap/scss/bootstrap.scss'
 Vue.config.productionTip = false

@@ -1,5 +1,10 @@
 <template>
   <section>
+    <AlertComponent
+      v-if="showError"
+      :message="errorMessage"
+      :code="errorCode"
+    ></AlertComponent>
     <div class="col form-group">
       <p
         class="text-left"
@@ -9,6 +14,7 @@
         type="email"
         class="form-control mb-2"
         v-model="user.email"
+        @keypress="showError = false"
         style="border-left-width: 0px; border-top-width: 0px; border-right-width: 0px; border-radius: 0.01rem;margin-top: -2vh;"
       />
       <p
@@ -23,9 +29,10 @@
         v-model="user.password"
         style="border-left-width: 0px; border-top-width: 0px; border-right-width: 0px; border-radius: 0.01rem; margin-top: -2vh;"
         @keypress.enter="login"
+        @keypress="showError = false"
       />
-      {{user.password}}
-      {{1+1}}
+      <!-- {{user.password}}
+      {{1+1}} -->
       <div class="form-group">
         <div class="row">
           <div
@@ -68,10 +75,16 @@
 
 <script lang="js">
 import Auth from '@/config/auth.js'
+import AlertComponent from './helpers/Alerts'
 export default {
   name: 'LoginForm',
+  components: { AlertComponent
+  },
   data () {
     return {
+      showError: false,
+      errorMessage: '',
+      errorCode: '',
       user: {
         email: ' ',
         password: ''
@@ -105,6 +118,9 @@ export default {
         // *Tomamos el error y lo utilizamos en el alert correspondiente.
         console.log('Estoy en LoginForm')
         console.log('Esto es un error:' + error.code, error.message)
+        this.showError = true
+        this.errorMessage = error.message
+        this.errorCode = error.code
       })
     }
   }

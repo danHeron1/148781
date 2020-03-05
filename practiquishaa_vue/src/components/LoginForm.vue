@@ -75,7 +75,7 @@
 
 <script lang="js">
 import Auth from '@/config/auth.js'
-import AlertComponent from './helpers/Alerts'
+import AlertComponent from '@/components/Helpers/Alerts'
 export default {
   name: 'LoginForm',
   components: { AlertComponent

@@ -5,69 +5,75 @@
       :message="errorMessage"
       :code="errorCode"
     ></AlertComponent>
-    <div class="col form-group">
-      <p
-        class="text-left"
-        style="margin-top: 5vh;font-weight: bold;"
-      >Email</p>
-      <input
-        type="email"
-        class="form-control mb-2"
-        v-model="user.email"
-        @keypress="showError = false"
-        style="border-left-width: 0px; border-top-width: 0px; border-right-width: 0px; border-radius: 0.01rem;margin-top: -2vh;"
-      />
-      <p
-        class="text-left"
-        style="margin-top: 4vh;font-weight: bold;"
-      >
-        Password
-      </p>
-      <input
-        type="password"
-        class="form-control mb-2"
-        v-model="user.password"
-        style="border-left-width: 0px; border-top-width: 0px; border-right-width: 0px; border-radius: 0.01rem; margin-top: -2vh;"
-        @keypress.enter="login"
-        @keypress="showError = false"
-      />
-      <!-- {{user.password}}
-      {{1+1}} -->
-      <div class="form-group">
-        <div class="row">
-          <div
-            class="col "
-            style="margin-top: 2vh;"
-          >
-            <button
-              class="btn btn-dark btn-dark btn-block"
-              style="margin-top: 2vh; border-radius: 0.01rem;padding: 2vh; margin-bottom: 2vh;"
-              @click="login"
-            >
-              Log In
-            </button>
-            <input
-              class="form-check-input"
-              type="checkbox"
-              value=""
-              id="defaultCheck1"
-              style="/*! padding-top: 10vh; */margin: 6px -18px 13px -15px;"
-            />
 
-            <small>Recuerdame</small>
+    <div class="col">
+      <div class="col mb-3">
+        <p
+          class="text-left"
+          style="margin-top: 5vh;font-weight: bold;"
+        >Email</p>
+        <input
+          type="email"
+          class="form-control mb-3"
+          v-model="user.email"
+          @keypress="showError = false"
+          style="border-left-width: 0px; border-top-width: 0px; border-right-width: 0px; border-radius: 0.01rem;margin-top: -2vh;"
+        />
+        <p
+          class="text-left"
+          style="margin-top: 4vh;font-weight: bold;"
+        >
+          Password
+        </p>
+        <input
+          type="password"
+          class="form-control mb-3"
+          v-model="user.password"
+          style="border-left-width: 0px; border-top-width: 0px; border-right-width: 0px; border-radius: 0.01rem; margin-top: -2vh;"
+          @keypress.enter="login"
+          @keypress="showError = false"
+        />
+      </div>
+      <div class="col mb-3">
+        <div class="form-group mb-3">
+          <div class="row">
             <div
-              class="col"
+              class="col "
               style="margin-top: 2vh;"
             >
-              <a
-                class="btn btn-light"
-                href="#"
-                role="button"
-                style="border-top-width: 0px;margin-right: 0px;border-right-width: 0px;border-left-width: 0px;border-bottom-width: 0px;background: white;"
-              >Forgot your password?</a>
+              <button
+                class="btn btn-dark btn-dark btn-block"
+                style="margin-top: 2vh; border-radius: 0.01rem;padding: 2vh; margin-bottom: 2vh;"
+                @click="login"
+              >
+                Log In
+              </button>
             </div>
           </div>
         </div>
+      </div>
+
+      <!-- {{user.password}}
+      {{1+1}} -->
+      <input
+        class="form-check-input"
+        type="checkbox"
+        value=""
+        id="defaultCheck1"
+        style="/*! padding-top: 10vh; */margin: 6px -18px 13px -15px;"
+      />
+
+      <small>Recuerdame</small>
+      <div
+        class="col"
+        style="margin-top: 2vh;"
+      >
+        <a
+          class="btn btn-light"
+          href="#"
+          role="button"
+          style="border-top-width: 0px;margin-right: 0px;border-right-width: 0px;border-left-width: 0px;border-bottom-width: 0px;background: white;"
+        >Forgot your password?</a>
       </div>
     </div>
   </section>

@@ -20,7 +20,7 @@
         type="password"
         class="form-control mb-2"
         v-model="user.password"
-        style="border-left-width: 0px; border-top-width: 0px; border-right-width: 0px; border-radius: 0.01rem; margin-top: -2vh;"
+        style="border-left-width: 0px; border-top-width: 0px;border-right-width: 0px; border-radius: 0.01rem; margin-top: -2vh;"
         @keypress.enter="login"
       >
       <p

@@ -1,21 +1,18 @@
 <template>
-  <div class="login container1 ">
+  <div class="login container">
     <div class="card p-3">
 
       <div class="row no-gutters">
 
-        <div class="col">
+        <div class="col-sm-6  d-none d-lg-block">
 
           <img
             v-bind:src="'https://scontent.fcjs2-1.fna.fbcdn.net/v/t1.15752-9/83797382_613150709449195_2445596993007910912_n.png?_nc_cat=102&_nc_ohc=F9sNri7fN1EAX_G8g--&_nc_ht=scontent.fcjs2-1.fna&oh=d9e057ae81aa040ee044da42e8ca6c28&oe=5ECC7CFF'"
-            width="600"
+            width="100%"
           />
         </div>
 
-        <div
-          class="col-5"
-          style="padding: 3vh 5vh;"
-        >
+        <div class="col-lg-6">
 
           <button
             type="button"
@@ -30,7 +27,7 @@
           >Register</button>
           <LoginFormDos
             class="login-form"
-            style="margin: 0vh 10vh;"
+            style="margin: 0vh 5vh;"
           ></LoginFormDos>
         </div>
       </div>
@@ -51,7 +48,4 @@ export default {
 </script>
 
 <style lang="scss">
-.container1 {
-  margin: 0vh 20vh 0vh 20vh;
-}
 </style>

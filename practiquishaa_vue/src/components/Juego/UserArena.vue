@@ -8,8 +8,8 @@
         >Player</h3>
       </div>
       <div class="row">
-        <div class="col-3 mx-auto">
-          <h1 style="text-shadow: 2px 2px 4px #000000">🤜</h1>
+        <div class="col-3 mx-auto opciones">
+          <h1 style="text-shadow: 2px 2px 4px #000000">{{options[userOpcion]}}</h1>
         </div>
       </div>
       <div class="row">

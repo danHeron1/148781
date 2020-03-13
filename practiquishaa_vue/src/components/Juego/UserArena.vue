@@ -5,7 +5,7 @@
         <h3
           class="mx-auto"
           style="color:white; text-shadow: 2px 2px 4px #000000"
-        >Player</h3>
+        >{{displayName}}</h3>
       </div>
       <div class="row">
         <div class="col-3 mx-auto opciones">

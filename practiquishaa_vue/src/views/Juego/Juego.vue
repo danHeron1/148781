@@ -50,11 +50,14 @@ import Auth from '../../config/auth.js'
 const partida = fireApp.firestore().collection('juego-1')
 export default {
   name: 'Partida',
+  props: ['usuario_opcion'],
   components: {
     UserArena
   },
   beforeRouteEnter (to, from, next) {
-    next(vm => {
+    next(async vm => {
+      vm.$bind('user', Auth.getUser())
+      vm.user = await Auth.getUser()
       vm.$bind('partida', partida.doc(to.params.no_partida))
     })
   },
@@ -73,30 +76,32 @@ export default {
       deep: true,
       immediate: true,
       handler (value) {
+        this.user = Auth.getUser()
         this.$bind('partida', partida.doc(value.no_partida))
       }
     }
   },
   mounted () {
-    this.user = Auth.getUser()
+    // this.user = Auth.getUser()
   },
   methods: {
-
+    async obtenerUser () {
+      this.user = await Auth.getUser()
+    },
     crearPartida () {
       this.user = Auth.getUser()
-      // eslint-disable-next-line no-unused-vars
       let uid = this.user.uid
-      // *Escribe en la base de datos.
+      // Escribe en la base de datos
       fireApp.firestore().collection('juego-1').add({
         participantes: [uid],
-        names: [this.user.displayName == null ? 'Usuario 1' : this.user.displayName],
-        usuario_1: '',
-        usuario_2: '',
-        ganador: ''
+        names: [this.user.displayName == null ? 'Usuario' : this.user.displayName],
+        'usuario_1': ' ',
+        'usuario_2': ' ',
+        'ganador': ' '
       })
     },
-    obtenerPartida (partida) {
-      fireApp.firestore().collection('juego-1').doc(partida).get().then((result) => {
+    obtenerPartida () {
+      fireApp.firestore().collection('juego-1').doc(this.partida).get().then((result) => {
         console.log(result.data())
       })
     },
@@ -104,8 +109,8 @@ export default {
       this.user = Auth.getUser()
       // eslint-disable-next-line no-unused-vars
       let uid = this.user.uid
-      // *Escribe en la base de datos.
-      this.partida.names.push(this.user.displayName == null ? 'Usuario' : this.user.displayName)
+      // Escribe en la base de datos
+      this.partida.name.push(this.user.displayName == null ? 'Usuario' : this.user.displayName)
       this.partida.participantes.push(this.user.uid)
       fireApp.firestore().collection('juego-1').doc(this.$route.params.no_partida).update(this.partida)
     },

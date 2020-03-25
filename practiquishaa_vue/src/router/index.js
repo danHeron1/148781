@@ -45,7 +45,7 @@ const routes = [
   },
   {
     path: '/juego-1/:no_partida',
-    name: 'juego',
+    name: 'Juego',
     component: Juego
   }
 ]

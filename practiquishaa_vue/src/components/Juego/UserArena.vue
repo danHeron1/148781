@@ -35,7 +35,7 @@
 <script lang="js">
 export default {
   name: 'UserArena',
-  props: ['userOpcion'],
+  props: ['userOpcion', 'displayName'],
   data () {
     return {
       options: {

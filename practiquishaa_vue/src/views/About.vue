@@ -1,6 +1,6 @@
 <template>
   <div class="about">
-    <h1>This is an {{$route.name}} page</h1>
+    <h1 style="color:white;">This is an {{$route.name}} page</h1>
     <button
       class="btn btn-danger"
       @click="logOut"

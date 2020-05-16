@@ -1,30 +1,25 @@
 <template>
   <div class="login container">
-    <div class="card p-3">
+    <div
+      class="card p-3"
+      style="background-color: #fff0;"
+    >
 
       <div class="row no-gutters">
 
         <div class="col-sm-6  d-none d-lg-block">
 
           <img
-            v-bind:src="'https://scontent.fcjs2-1.fna.fbcdn.net/v/t1.15752-9/83797382_613150709449195_2445596993007910912_n.png?_nc_cat=102&_nc_ohc=F9sNri7fN1EAX_G8g--&_nc_ht=scontent.fcjs2-1.fna&oh=d9e057ae81aa040ee044da42e8ca6c28&oe=5ECC7CFF'"
+            v-bind:src="'https://scontent-dfw5-2.xx.fbcdn.net/v/t1.15752-9/96516185_258150225596995_175301658576683008_n.png?_nc_cat=108&_nc_sid=b96e70&_nc_ohc=mizO-B05WugAX_zd3AD&_nc_ht=scontent-dfw5-2.xx&oh=321302a94dd023811ae51fa4cc628896&oe=5EDEA115'"
             width="100%"
           />
         </div>
 
-        <div class="col-lg-6">
+        <div
+          class="col-lg-6"
+          style="margin-top: 10vh;"
+        >
 
-          <button
-            type="button"
-            class="btn btn-light"
-            @click="login"
-            style="margin: 5vh 8vh 0vh -4vh; background: white;border-top-width: 0px;border-left-width: 0px;border-right-width: 0px;"
-          >Sign Up</button>
-          <button
-            type="button"
-            class="btn btn-light"
-            style="margin: 5vh -2vh 0vh 2vh;background: white;border-top-width: 0px;border-left-width: 0px;border-right-width: 0px;"
-          >Register</button>
           <LoginFormDos
             class="login-form"
             style="margin: 0vh 5vh;"
@@ -44,6 +39,7 @@ export default {
   components: {
     LoginFormDos
   }
+
 }
 </script>
 

@@ -1,55 +1,61 @@
 <template>
-  <div class="login container1 ">
-    <div class="card p-3">
+  <div class=" p-4 ">
+    <div
+      class="card p-3"
+      style="background-color: #0000002e;"
+    >
 
       <div class="row no-gutters">
 
-        <div class="col">
+        <div class="col-sm-6  d-none d-lg-block">
 
           <img
-            v-bind:src="'https://scontent-dfw5-1.xx.fbcdn.net/v/t1.15752-9/88060287_3055393414479313_4625591950005764096_n.jpg?_nc_cat=101&_nc_sid=b96e70&_nc_ohc=QHQL31SyEDgAX9IfZ3h&_nc_ht=scontent-dfw5-1.xx&oh=9b8a577471552cf2b7ccb366a25812c4&oe=5EFA5749'"
+            v-bind:src="'https://images.unsplash.com/photo-1518806118471-f28b20a1d79d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80'"
             width="60%"
           />
         </div>
 
-        <div
-          class="col-5"
-          style="padding: 3vh 5vh;"
-        >
+        <div class="col-lg-5 ">
           <img
-            v-bind:src="'https://scontent-dfw5-1.xx.fbcdn.net/v/t1.15752-9/88060287_3055393414479313_4625591950005764096_n.jpg?_nc_cat=101&_nc_sid=b96e70&_nc_ohc=QHQL31SyEDgAX9IfZ3h&_nc_ht=scontent-dfw5-1.xx&oh=9b8a577471552cf2b7ccb366a25812c4&oe=5EFA5749'"
+            v-bind:src="'https://images.unsplash.com/photo-1518806118471-f28b20a1d79d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80'"
             width="30%"
           />
           <form>
             <div
               class="row"
-              style="margin-top: 6vh;"
+              style="margin-top: 3vh;"
             >
-              <p style="margin-top: 8px;">Nombre</p>
+              <p style="margin-top: 8px; color:white;">Nombre</p>
               <div class="col">
                 <input
                   type="text"
                   class="form-control"
-                  placeholder="First name"
+                  placeholder="Nombre"
                   style="margin-left: -8px;"
                 >
               </div>
-              <p style="margin-top: 8px;">Apellido</p>
+
+            </div>
+            <div
+              class="row"
+              style="margin-top: 3vh;"
+            >
+              <p style="margin-top: 8px; color:white;">Apellido</p>
               <div class="col">
                 <input
                   type="text"
                   class="form-control"
-                  placeholder="Last name"
-                  style="margin-left: -1px;"
+                  placeholder="Apellido"
+                  style="margin-left: -8px;"
                 >
-
               </div>
+
             </div>
             <div
               class="row"
-              style="margin-top: 6vh;"
+              style="margin-top: 3vh;"
             >
-              <p style="margin-top: 8px;">Correo</p>
+              <p style="margin-top: 8px; color:white;">Correo</p>
               <div class="col">
                 <input
                   type="email"
@@ -58,18 +64,25 @@
                 >
 
               </div>
-              <p style="margin-top: 8px;">Teléfono</p>
+
+            </div>
+            <div
+              class="row"
+              style="margin-top: 3vh;"
+            >
+              <p style="margin-top: 8px; color:white;">Telefono</p>
               <div class="col">
                 <input
-                  type="text"
+                  type="email"
                   class="form-control"
-                  placeholder="Teléfono"
+                  placeholder="Telefono"
                 >
 
               </div>
+
             </div>
             <button
-              class="btn btn-primary btn-primary btn-block"
+              class="btn btn-primary btn-primary btn-block  mx-auto"
               style="padding: 2vh; width: 25vh; margin: 15px 130px;border-radius: 35px;"
             >
               Guardar Cambios
@@ -88,7 +101,4 @@
 </script>
 
 <style lang="scss">
-.container1 {
-  margin: 0vh 20vh 0vh 20vh;
-}
 </style>

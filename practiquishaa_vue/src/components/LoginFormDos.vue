@@ -4,7 +4,7 @@
     <div class="col form-group">
       <p
         class="text-left"
-        style="margin-top: 5vh;font-weight: bold;"
+        style="margin-top: 5vh;font-weight: bold;color: white;"
       >Email Adress</p>
       <input
         type="email"
@@ -14,7 +14,7 @@
       >
       <p
         class="text-left"
-        style="margin-top: 4vh;font-weight: bold;"
+        style="margin-top: 4vh;font-weight: bold;color: white;"
       >Password</p>
       <input
         type="password"
@@ -25,7 +25,7 @@
       >
       <p
         class="text-left"
-        style="margin-top: 4vh;font-weight: bold;"
+        style="margin-top: 4vh;font-weight: bold;color: white;"
       >Confirm Password</p>
       <input
         type="password"
@@ -43,18 +43,9 @@
             style="margin-top: 2vh;"
           >
 
-            <input
-              class="form-check-input"
-              type="checkbox"
-              value=""
-              id="defaultCheck1"
-              style="/*! padding-top: 10vh; */margin: 6px -18px 13px -15px;"
-            >
-
-            <small>I accept the privacy Statement</small>
             <button
               class="btn btn-dark btn-block"
-              style="margin-top: 2vh; border-radius: 0.01rem;padding: 2vh; margin-bottom: 2vh;"
+              style="margin-top: 2vh; border-radius: 0.01rem;padding: 2vh; margin-bottom: 2vh; background-color:gray;"
               @click="login"
             >Register</button>
             <div

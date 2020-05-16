@@ -49,7 +49,7 @@ import fireApp from '../../config/_firebase.js'
 import Auth from '../../config/auth.js'
 const partida = fireApp.firestore().collection('juego-1')
 export default {
-  name: 'Partida',
+  name: 'Partidas',
   props: ['usuario_opcion'],
   components: {
     UserArena

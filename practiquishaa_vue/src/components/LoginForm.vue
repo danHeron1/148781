@@ -10,7 +10,7 @@
       <div class="col mb-3">
         <p
           class="text-left"
-          style="margin-top: 5vh;font-weight: bold;"
+          style="margin-top: 5vh;font-weight: bold;color:white;"
         >Email</p>
         <input
           type="email"
@@ -21,7 +21,7 @@
         />
         <p
           class="text-left"
-          style="margin-top: 4vh;font-weight: bold;"
+          style="margin-top: 4vh;font-weight: bold;color:white;"
         >
           Password
         </p>
@@ -43,7 +43,7 @@
             >
               <button
                 class="btn btn-dark btn-dark btn-block"
-                style="margin-top: 2vh; border-radius: 0.01rem;padding: 2vh; margin-bottom: 2vh;"
+                style="margin-top: 2vh; border-radius: 0.01rem;padding: 2vh; margin-bottom: 2vh;background-color: gray;"
                 @click="login"
               >
                 Log In
@@ -53,28 +53,24 @@
         </div>
       </div>
 
-      <!-- {{user.password}}
-      {{1+1}} -->
-      <input
-        class="form-check-input"
-        type="checkbox"
-        value=""
-        id="defaultCheck1"
-        style="/*! padding-top: 10vh; */margin: 6px -18px 13px -15px;"
-      />
-
-      <small>Recuerdame</small>
       <div
         class="col"
         style="margin-top: 2vh;"
       >
         <a
-          class="btn btn-light"
+          class="btn float-left btn-light"
           href="#"
           role="button"
           style="border-top-width: 0px;margin-right: 0px;border-right-width: 0px;border-left-width: 0px;border-bottom-width: 0px;background: white;"
         >Forgot your password?</a>
+        <button
+          type="button"
+          class="btn float-right btn-light"
+          @click="logins"
+          style="margin: 0vh 0vh 0vh 0vh;background: white;border-top-width: 0px;border-left-width: 0px;border-right-width: 0px;"
+        >Register</button>
       </div>
+
     </div>
   </section>
 </template>
